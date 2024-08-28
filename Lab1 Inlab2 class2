@@ -1,1 +1,26 @@
-/* Q) 
+/* Q) Develop Java code with 2 methods in MyFirstClass a) factorial () b) isStrong() Strong
+number is a special number whose sum of factorial of digits is equal to the original
+number. For example: 145 is strong number. Since, 1! + 4! + 5! = 145. The method
+expects an integer as argument and then returns true if the number is strong, otherwise
+returns false. modularizing to a class level*/
+
+package InLab;
+
+public class MyDemo {
+
+	public static void main(String[] args) {
+		MyFirstClass s = new MyFirstClass();
+        int num = s.factorial(8);
+        System.out.println("Factorial is: " + num);
+        
+        boolean strong = s.isStrong(125);
+        if (strong==true) {
+            System.out.println("It is a Strong number");
+        } 
+        else {
+            System.out.println("It is not a Strong number");
+        }
+    }
+
+}
+
