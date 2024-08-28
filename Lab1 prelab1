@@ -1,3 +1,5 @@
+//Write a Java Program to print the “Hello World” statement.
+
 package prelab;
 
 public class HelloWorld {
