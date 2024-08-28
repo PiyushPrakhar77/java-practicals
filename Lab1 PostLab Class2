@@ -1,0 +1,40 @@
+?* Modify MyIntegerMath class, such that it contains the following
+methods
+1) countDigits() 2)isArmstrong().
+countDigits() expects an integer as argument and returns the number of digits in
+it. isArmstrong() expects an integer as argument and returns true if it is an
+Armstrong number otherwise returns false.*/
+
+package PostLab;
+
+public class MyDemo {
+
+	public static void main(String[] args) {
+		 MyIntegerMath m= new MyIntegerMath();
+		 int factorial = m.factorial(8);
+	        System.out.println("Factorial is: " + factorial);
+
+	        boolean strong = m.isStrong(125);
+	        if (strong==true) {
+	            System.out.println("It is a Strong number");
+	        } 
+	        else {
+	            System.out.println("It is not a Strong number");
+	        }
+	        
+	        int count=m.countDigits(12345);
+	        System.out.println("Number of digits is: "+ count);
+	        
+	        boolean armstrong = m.isArmstrong(153);
+	        if (armstrong==true) {
+	            System.out.println("It is a Armstrong number");
+	        } 
+	        else {
+	            System.out.println("It is not a Armstrong number");
+	        }
+	        
+
+	}
+
+}
+
