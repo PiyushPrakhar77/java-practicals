@@ -1,0 +1,60 @@
+/* Q) Modify MyIntegerMath class, such that it contains the following
+methods
+1) countDigits() 2)isArmstrong().
+countDigits() expects an integer as argument and returns the number of digits in
+it. isArmstrong() expects an integer as argument and returns true if it is an
+Armstrong number otherwise returns false.*/
+
+package PostLab;
+
+public class MyIntegerMath {
+	int factorial(int z) {
+        int factorial = 1;
+        for (int i = 1; i <= z; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+    boolean isStrong(int num) {
+        int originalNum = num;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += factorial(digit);
+            num /= 10;
+        }
+
+        return sum == originalNum;
+    }
+    
+    int countDigits(int num)
+    {
+    	int count=0;
+    	while(num>0)
+    	{
+    		num/=10;
+    		count++;
+    	}
+    	return count;
+    }
+    
+    public boolean isArmstrong(int number)
+    {
+    	String numStr=Integer.toString(number);
+		int numDigits=numStr.length();
+    	
+    	int sum=0;
+    	int temp=number;
+    	while(temp!=0)
+    	{
+    		int digit=temp%10;
+    		sum+=Math.pow(digit, numDigits);
+    		temp/=10;
+    	}
+    	return sum==number;		
+    }
+
+}
+
